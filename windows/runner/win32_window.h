@@ -11,7 +11,7 @@
 // inherited from by classes that wish to specialize with custom
 // rendering and input handling
 class Win32Window {
- public:
+public:
   struct Point {
     unsigned int x;
     unsigned int y;
@@ -30,7 +30,7 @@ class Win32Window {
 
   // Creates a win32 window with |title| that is positioned and sized using
   // |origin| and |size|. New windows are created on the default monitor. Window
-  // sizes are specified to the OS in physical pixels, hence to ensure a
+  // sizes are specified to the OS in physical pet, hence to ensure a
   // consistent size this function will scale the inputted width and height as
   // as appropriate for the default monitor. The window is invisible until
   // |Show| is called. Returns true if the window was created successfully.
@@ -60,9 +60,9 @@ class Win32Window {
   // size change and DPI. Delegates handling of these to member overloads that
   // inheriting classes can handle.
   virtual LRESULT MessageHandler(HWND window,
-                                 UINT const message,
-                                 WPARAM const wparam,
-                                 LPARAM const lparam) noexcept;
+                              UINT const message,
+                                WPARAM const wparam,
+                                LPARAM const lparam) noexcept;
 
   // Called when CreateAndShow is called, allowing subclass window-related
   // setup. Subclasses should return false if setup fails.
