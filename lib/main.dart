@@ -8,8 +8,10 @@ void main() {
 }
 
 class DigitalPetApp extends StatefulWidget {
+  const DigitalPetApp({super.key});
+
   @override
-  _DigitalPetAppState createState() => _DigitalPetAppState();
+  State<DigitalPetApp> createState() => _DigitalPetAppState();
 }
 
 class _DigitalPetAppState extends State<DigitalPetApp> {
